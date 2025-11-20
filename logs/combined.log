@@ -1,0 +1,50 @@
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:01:29:07 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:01:29:12 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:18:10 +0000] \"GET / HTTP/1.1\" 200 23 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:20:07 +0000] \"GET / HTTP/1.1\" 200 23 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:21:59 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:23:51 +0000] \"GET /health HTTP/1.1\" 200 75 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:26:36 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:27:38 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:29:26 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:29:44 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:30:50 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:30:57 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:31:15 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:31:52 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"Hello from Acquisition!","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:32:38 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [16/Nov/2025:15:33:02 +0000] \"GET /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:37:47 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:38:35 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:40:10 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.43.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:41:22 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 41 \"-\" \"PostmanRuntime/7.43.0\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:46:27 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:46:28 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:59:42 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:59:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:59:43 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:59:44 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:21:59:44 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:22:00:06 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:22:01:26 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:22:02:40 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 200 41 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:22:20:06 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [18/Nov/2025:22:29:10 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 400 92 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: contact@salah.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [19/Nov/2025:10:40:09 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 102 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User admin@saleh.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: admin@saleh.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [19/Nov/2025:17:27:36 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 101 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User salih_abdessalem@hotmail.com created successfully","service":"acquisitions-api"}
+{"level":"info","message":"User registered successfully: salih_abdessalem@hotmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [19/Nov/2025:21:48:58 +0000] \"POST /api/auth/sign-up HTTP/1.1\" 201 113 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User salih_abdessalem@hotmail.com authenticated successfully","service":"acquisitions-api"}
+{"level":"info","message":"User signed in successfully: salih_abdessalem@hotmail.com","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [20/Nov/2025:16:20:33 +0000] \"POST /api/auth/sign-in HTTP/1.1\" 200 125 \"-\" \"HTTPie\"","service":"acquisitions-api"}
+{"level":"info","message":"User signed out successfully","service":"acquisitions-api"}
+{"level":"info","message":"::1 - - [20/Nov/2025:16:25:39 +0000] \"POST /api/auth/sign-out HTTP/1.1\" 200 42 \"-\" \"HTTPie\"","service":"acquisitions-api"}
