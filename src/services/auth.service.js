@@ -1,4 +1,4 @@
-import { db } from '#config/database.config.js';
+import { db } from '#config/database.js';
 import logger from '#config/logger.js';
 import { users } from '#models/user.model.js';
 import bcrypt from 'bcrypt';
