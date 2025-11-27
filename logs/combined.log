@@ -72,3 +72,38 @@
 {"level":"info","message":"Hello from Acquisitions!","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [23/Nov/2025:13:03:46 +0000] \"GET / HTTP/1.1\" 304 - \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
 {"level":"info","message":"::1 - - [23/Nov/2025:13:03:46 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:33:20 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:33:20 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:33:20 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:09 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:09 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:09 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:58 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:58 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:34:58 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:36:37 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:36:37 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:36:37 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:57 +0000] \"GET /health HTTP/1.1\" 200 72 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:57 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"Rate limit exceeded","path":"/nonexsistent","service":"acquisitions-api","userAgent":"test-agent"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:37:58 +0000] \"GET /nonexsistent HTTP/1.1\" 403 69 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:38:28 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:38:28 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"ip":"::ffff:127.0.0.1","level":"warn","message":"Rate limit exceeded","path":"/nonexsistent","service":"acquisitions-api","userAgent":"test-agent"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:38:28 +0000] \"GET /nonexsistent HTTP/1.1\" 403 69 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:39:08 +0000] \"GET /health HTTP/1.1\" 200 70 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:39:08 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:39:09 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"test-agent\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:52:59 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:52:59 +0000] \"GET /api HTTP/1.1\" 200 41 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:17:53:00 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:18:03:37 +0000] \"GET /health HTTP/1.1\" 200 73 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:18:03:37 +0000] \"GET /api HTTP/1.1\" 200 42 \"-\" \"-\"","service":"acquisitions-api"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [26/Nov/2025:18:03:37 +0000] \"GET /nonexsistent HTTP/1.1\" 404 27 \"-\" \"-\"","service":"acquisitions-api"}

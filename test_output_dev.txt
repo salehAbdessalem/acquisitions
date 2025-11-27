@@ -1,0 +1,95 @@
+﻿  console.warn
+    Ô£ªAj WARN Arcjet will use 127.0.0.1 when missing public IP address in development mode
+
+    [0m [90m 1 |[39m [36mimport[39m arcjet[33m,[39m { shield[33m,[39m detectBot[33m,[39m slidingWindow } [36mfrom[39m [32m'@arcjet/node'[39m[33m;[39m
+     [90m 2 |[39m
+    [31m[1m>[22m[39m[90m 3 |[39m [36mconst[39m aj [33m=[39m arcjet({
+     [90m   |[39m            [31m[1m^[22m[39m
+     [90m 4 |[39m   key[33m:[39m process[33m.[39menv[33m.[39m[33mARCJET_KEY[39m[33m,[39m
+     [90m 5 |[39m   rules[33m:[39m [
+     [90m 6 |[39m     shield({ mode[33m:[39m [32m'LIVE'[39m })[33m,[39m[0m
+
+      at Logger.warn (node_modules/@arcjet/logger/index.js:104:25)
+      at arcjet (node_modules/@arcjet/node/index.js:119:13)
+      at arcjet (src/config/arcjet.js:3:12)
+
+  console.error
+    Ô£ªAj ERROR Failure running rule: BOT due to bot detection requires user-agent header
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1574:25)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] "GET /health HTTP/1.1" 200 73 "-" "-" {"service":"acquisitions-api"}
+  console.error
+    Ô£ªAj ERROR Failure running rule: BOT due to bot detection requires user-agent header
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1574:25)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] "GET /api HTTP/1.1" 200 41 "-" "-" {"service":"acquisitions-api"}
+  console.error
+    Ô£ªAj ERROR Failure running rule: BOT due to bot detection requires user-agent header
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1574:25)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:37:13 +0000] "GET /nonexsistent HTTP/1.1" 404 27 "-" "-" {"service":"acquisitions-api"}
+-------------------------|---------|----------|---------|---------|-------------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                   
+-------------------------|---------|----------|---------|---------|-------------------------------------
+All files                |   34.25 |    33.33 |   11.11 |   34.25 |                                     
+ src                     |   96.07 |      100 |     100 |   96.07 |                                     
+  app.js                 |   96.07 |      100 |     100 |   96.07 | 28-29                               
+ src/config              |   93.65 |        0 |     100 |   93.65 |                                     
+  arcjet.js              |     100 |      100 |     100 |     100 |                                     
+  database.js            |      75 |        0 |     100 |      75 | 7-10                                
+  logger.js              |     100 |        0 |     100 |     100 | 4                                   
+ src/controllers         |    8.13 |      100 |       0 |    8.13 |                                     
+  auth.controller.js     |   11.42 |      100 |       0 |   11.42 | 9-50,53-93,96-105                   
+  users.controller.js    |    6.31 |      100 |       0 |    6.31 | 7-21,24-54,57-132,135-190           
+ src/middleware          |   31.54 |    16.66 |   66.66 |   31.54 |                                     
+  auth.middleware.js     |   14.06 |      100 |      50 |   14.06 | 5-35,39-62                          
+  security.middleware.js |    44.7 |     9.09 |     100 |    44.7 | 13-14,16-17,34-45,48-60,63-74,77-82 
+ src/models              |     100 |      100 |     100 |     100 |                                     
+  user.model.js          |     100 |      100 |     100 |     100 |                                     
+ src/routes              |     100 |      100 |     100 |     100 |                                     
+  auth.routes.js         |     100 |      100 |     100 |     100 |                                     
+  users.routes.js        |     100 |      100 |     100 |     100 |                                     
+ src/services            |   13.44 |      100 |       0 |   13.44 |                                     
+  auth.service.js        |   16.04 |      100 |       0 |   16.04 | 8-14,17-23,26-51,54-81              
+  users.service.js       |   11.42 |      100 |       0 |   11.42 | 7-20,23-42,45-82,85-105             
+ src/utils               |   47.16 |      100 |       0 |   47.16 |                                     
+  cookies.js             |      60 |      100 |       0 |      60 | 3-6,10,14,18-19                     
+  format.js              |    12.5 |      100 |       0 |    12.5 | 2-8                                 
+  jwt.js                 |      48 |      100 |       0 |      48 | 10-15,18-24                         
+ src/validations         |    93.1 |      100 |       0 |    93.1 |                                     
+  auth.validation.js     |     100 |      100 |     100 |     100 |                                     
+  users.validation.js    |    87.5 |      100 |       0 |    87.5 | 12-13                               
+-------------------------|---------|----------|---------|---------|-------------------------------------

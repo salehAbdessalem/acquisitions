@@ -1,0 +1,363 @@
+﻿
+> acquisitions@1.0.0 test
+> cross-env NODE_OPTIONS=--experimental-vm-modules jest tests/app.test.js
+
+  console.warn
+    Ô£ªAj WARN Client IP address is missing. If this is a dev environment set the ARCJET_ENV env var to "development"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.warn (node_modules/@arcjet/logger/index.js:104:25)
+      at toArcjetRequest (node_modules/@arcjet/node/index.js:141:21)
+      at Object.protect (node_modules/@arcjet/node/index.js:197:29)
+      at protect (src/middleware/security.middleware.js:32:35)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at logger (node_modules/morgan/index.js:144:5)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cookieParser (node_modules/cookie-parser/index.js:57:14)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at urlencodedParser (node_modules/body-parser/lib/types/urlencoded.js:68:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at jsonParser (node_modules/body-parser/lib/types/json.js:100:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cors (node_modules/cors/lib/index.js:188:7)
+      at node_modules/cors/lib/index.js:224:17
+      at originCallback (node_modules/cors/lib/index.js:214:15)
+      at node_modules/cors/lib/index.js:219:13
+      at optionsCallback (node_modules/cors/lib/index.js:199:9)
+      at corsMiddleware (node_modules/cors/lib/index.js:204:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at internalNext (node_modules/helmet/index.mjs:527:6)
+      at xXssProtectionMiddleware (node_modules/helmet/index.mjs:307:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPoweredByMiddleware (node_modules/helmet/index.mjs:300:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPermittedCrossDomainPoliciesMiddleware (node_modules/helmet/index.mjs:293:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xFrameOptionsMiddleware (node_modules/helmet/index.mjs:277:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDownloadOptionsMiddleware (node_modules/helmet/index.mjs:257:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDnsPrefetchControlMiddleware (node_modules/helmet/index.mjs:250:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xContentTypeOptionsMiddleware (node_modules/helmet/index.mjs:242:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at strictTransportSecurityMiddleware (node_modules/helmet/index.mjs:235:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at referrerPolicyMiddleware (node_modules/helmet/index.mjs:203:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at originAgentClusterMiddleware (node_modules/helmet/index.mjs:178:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginResourcePolicyMiddleware (node_modules/helmet/index.mjs:171:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginOpenerPolicyMiddleware (node_modules/helmet/index.mjs:155:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at contentSecurityPolicyMiddleware (node_modules/helmet/index.mjs:120:4)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at helmetMiddleware (node_modules/helmet/index.mjs:529:6)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at Function.handle (node_modules/router/index.js:186:3)
+      at Function.handle (node_modules/express/lib/application.js:177:15)
+      at Server.app (node_modules/express/lib/express.js:38:9)
+
+  console.error
+    Ô£ªAj ERROR Failed to build fingerprint. Please verify your Characteristics.
+          error: "unable to generate fingerprint: error generating identifier - requested `ip` characteristic but the `ip` value was empty"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1472:17)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] "GET /health HTTP/1.1" 200 73 "-" "-" {"service":"acquisitions-api"}
+  console.warn
+    Ô£ªAj WARN Client IP address is missing. If this is a dev environment set the ARCJET_ENV env var to "development"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.warn (node_modules/@arcjet/logger/index.js:104:25)
+      at toArcjetRequest (node_modules/@arcjet/node/index.js:141:21)
+      at Object.protect (node_modules/@arcjet/node/index.js:197:29)
+      at protect (src/middleware/security.middleware.js:32:35)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at logger (node_modules/morgan/index.js:144:5)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cookieParser (node_modules/cookie-parser/index.js:57:14)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at urlencodedParser (node_modules/body-parser/lib/types/urlencoded.js:68:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at jsonParser (node_modules/body-parser/lib/types/json.js:100:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cors (node_modules/cors/lib/index.js:188:7)
+      at node_modules/cors/lib/index.js:224:17
+      at originCallback (node_modules/cors/lib/index.js:214:15)
+      at node_modules/cors/lib/index.js:219:13
+      at optionsCallback (node_modules/cors/lib/index.js:199:9)
+      at corsMiddleware (node_modules/cors/lib/index.js:204:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at internalNext (node_modules/helmet/index.mjs:527:6)
+      at xXssProtectionMiddleware (node_modules/helmet/index.mjs:307:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPoweredByMiddleware (node_modules/helmet/index.mjs:300:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPermittedCrossDomainPoliciesMiddleware (node_modules/helmet/index.mjs:293:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xFrameOptionsMiddleware (node_modules/helmet/index.mjs:277:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDownloadOptionsMiddleware (node_modules/helmet/index.mjs:257:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDnsPrefetchControlMiddleware (node_modules/helmet/index.mjs:250:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xContentTypeOptionsMiddleware (node_modules/helmet/index.mjs:242:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at strictTransportSecurityMiddleware (node_modules/helmet/index.mjs:235:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at referrerPolicyMiddleware (node_modules/helmet/index.mjs:203:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at originAgentClusterMiddleware (node_modules/helmet/index.mjs:178:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginResourcePolicyMiddleware (node_modules/helmet/index.mjs:171:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginOpenerPolicyMiddleware (node_modules/helmet/index.mjs:155:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at contentSecurityPolicyMiddleware (node_modules/helmet/index.mjs:120:4)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at helmetMiddleware (node_modules/helmet/index.mjs:529:6)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at Function.handle (node_modules/router/index.js:186:3)
+      at Function.handle (node_modules/express/lib/application.js:177:15)
+      at Server.app (node_modules/express/lib/express.js:38:9)
+
+  console.error
+    Ô£ªAj ERROR Failed to build fingerprint. Please verify your Characteristics.
+          error: "unable to generate fingerprint: error generating identifier - requested `ip` characteristic but the `ip` value was empty"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1472:17)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] "GET /api HTTP/1.1" 200 41 "-" "-" {"service":"acquisitions-api"}
+  console.warn
+    Ô£ªAj WARN Client IP address is missing. If this is a dev environment set the ARCJET_ENV env var to "development"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                                   [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.warn (node_modules/@arcjet/logger/index.js:104:25)
+      at toArcjetRequest (node_modules/@arcjet/node/index.js:141:21)
+      at Object.protect (node_modules/@arcjet/node/index.js:197:29)
+      at protect (src/middleware/security.middleware.js:32:35)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at logger (node_modules/morgan/index.js:144:5)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cookieParser (node_modules/cookie-parser/index.js:57:14)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at urlencodedParser (node_modules/body-parser/lib/types/urlencoded.js:68:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at jsonParser (node_modules/body-parser/lib/types/json.js:100:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at cors (node_modules/cors/lib/index.js:188:7)
+      at node_modules/cors/lib/index.js:224:17
+      at originCallback (node_modules/cors/lib/index.js:214:15)
+      at node_modules/cors/lib/index.js:219:13
+      at optionsCallback (node_modules/cors/lib/index.js:199:9)
+      at corsMiddleware (node_modules/cors/lib/index.js:204:7)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at internalNext (node_modules/helmet/index.mjs:527:6)
+      at xXssProtectionMiddleware (node_modules/helmet/index.mjs:307:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPoweredByMiddleware (node_modules/helmet/index.mjs:300:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xPermittedCrossDomainPoliciesMiddleware (node_modules/helmet/index.mjs:293:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xFrameOptionsMiddleware (node_modules/helmet/index.mjs:277:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDownloadOptionsMiddleware (node_modules/helmet/index.mjs:257:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xDnsPrefetchControlMiddleware (node_modules/helmet/index.mjs:250:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at xContentTypeOptionsMiddleware (node_modules/helmet/index.mjs:242:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at strictTransportSecurityMiddleware (node_modules/helmet/index.mjs:235:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at referrerPolicyMiddleware (node_modules/helmet/index.mjs:203:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at originAgentClusterMiddleware (node_modules/helmet/index.mjs:178:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginResourcePolicyMiddleware (node_modules/helmet/index.mjs:171:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at crossOriginOpenerPolicyMiddleware (node_modules/helmet/index.mjs:155:3)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at contentSecurityPolicyMiddleware (node_modules/helmet/index.mjs:120:4)
+      at internalNext (node_modules/helmet/index.mjs:525:6)
+      at helmetMiddleware (node_modules/helmet/index.mjs:529:6)
+      at Layer.handleRequest (node_modules/router/lib/layer.js:152:17)
+      at trimPrefix (node_modules/router/index.js:342:13)
+      at node_modules/router/index.js:297:9
+      at processParams (node_modules/router/index.js:582:12)
+      at next (node_modules/router/index.js:291:5)
+      at Function.handle (node_modules/router/index.js:186:3)
+      at Function.handle (node_modules/express/lib/application.js:177:15)
+      at Server.app (node_modules/express/lib/express.js:38:9)
+
+  console.error
+    Ô£ªAj ERROR Failed to build fingerprint. Please verify your Characteristics.
+          error: "unable to generate fingerprint: error generating identifier - requested `ip` characteristic but the `ip` value was empty"
+
+    [0m [90m 30 |[39m     )[33m;[39m
+     [90m 31 |[39m
+    [31m[1m>[22m[39m[90m 32 |[39m     [36mconst[39m decision [33m=[39m [36mawait[39m client[33m.[39mprotect(req)[33m;[39m
+     [90m    |[39m                      [31m[1m^[22m[39m
+     [90m 33 |[39m     [36mif[39m (decision[33m.[39misDenied() [33m&&[39m decision[33m.[39mreason[33m.[39misBot()) {
+     [90m 34 |[39m       logger[33m.[39mwarn([32m'Bot request blocked'[39m[33m,[39m {
+     [90m 35 |[39m         ip[33m:[39m req[33m.[39mip[33m,[39m[0m
+
+      at Logger.error (node_modules/@arcjet/logger/index.js:112:25)
+      at protect (node_modules/arcjet/index.js:1472:17)
+      at securityMiddleware (src/middleware/security.middleware.js:32:22)
+
+[32minfo[39m: ::ffff:127.0.0.1 - - [26/Nov/2025:17:35:58 +0000] "GET /nonexsistent HTTP/1.1" 404 27 "-" "-" {"service":"acquisitions-api"}
+-------------------------|---------|----------|---------|---------|-------------------------------------
+File                     | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                   
+-------------------------|---------|----------|---------|---------|-------------------------------------
+All files                |   34.25 |    33.33 |   11.11 |   34.25 |                                     
+ src                     |   96.07 |      100 |     100 |   96.07 |                                     
+  app.js                 |   96.07 |      100 |     100 |   96.07 | 28-29                               
+ src/config              |   93.65 |        0 |     100 |   93.65 |                                     
+  arcjet.js              |     100 |      100 |     100 |     100 |                                     
+  database.js            |      75 |        0 |     100 |      75 | 7-10                                
+  logger.js              |     100 |        0 |     100 |     100 | 4                                   
+ src/controllers         |    8.13 |      100 |       0 |    8.13 |                                     
+  auth.controller.js     |   11.42 |      100 |       0 |   11.42 | 9-50,53-93,96-105                   
+  users.controller.js    |    6.31 |      100 |       0 |    6.31 | 7-21,24-54,57-132,135-190           
+ src/middleware          |   31.54 |    16.66 |   66.66 |   31.54 |                                     
+  auth.middleware.js     |   14.06 |      100 |      50 |   14.06 | 5-35,39-62                          
+  security.middleware.js |    44.7 |     9.09 |     100 |    44.7 | 13-14,16-17,34-45,48-60,63-74,77-82 
+ src/models              |     100 |      100 |     100 |     100 |                                     
+  user.model.js          |     100 |      100 |     100 |     100 |                                     
+ src/routes              |     100 |      100 |     100 |     100 |                                     
+  auth.routes.js         |     100 |      100 |     100 |     100 |                                     
+  users.routes.js        |     100 |      100 |     100 |     100 |                                     
+ src/services            |   13.44 |      100 |       0 |   13.44 |                                     
+  auth.service.js        |   16.04 |      100 |       0 |   16.04 | 8-14,17-23,26-51,54-81              
+  users.service.js       |   11.42 |      100 |       0 |   11.42 | 7-20,23-42,45-82,85-105             
+ src/utils               |   47.16 |      100 |       0 |   47.16 |                                     
+  cookies.js             |      60 |      100 |       0 |      60 | 3-6,10,14,18-19                     
+  format.js              |    12.5 |      100 |       0 |    12.5 | 2-8                                 
+  jwt.js                 |      48 |      100 |       0 |      48 | 10-15,18-24                         
+ src/validations         |    93.1 |      100 |       0 |    93.1 |                                     
+  auth.validation.js     |     100 |      100 |     100 |     100 |                                     
+  users.validation.js    |    87.5 |      100 |       0 |    87.5 | 12-13                               
+-------------------------|---------|----------|---------|---------|-------------------------------------
