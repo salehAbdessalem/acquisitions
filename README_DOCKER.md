@@ -57,11 +57,13 @@ make help
 ## Architecture
 
 ### Development Environment
+
 - **Neon Local**: Proxy that creates ephemeral database branches
 - **App Container**: Node.js app with hot-reload enabled
 - **Automatic Branching**: Fresh database branch on every start
 
 ### Production Environment
+
 - **App Container**: Production-optimized Node.js app
 - **Neon Cloud**: Direct connection to serverless Postgres
 - **No Proxy**: Connects directly to neon.tech
@@ -69,6 +71,7 @@ make help
 ## Environment Variables
 
 ### Development (.env.development)
+
 ```env
 NEON_API_KEY=your_neon_api_key
 NEON_PROJECT_ID=your_neon_project_id
@@ -77,6 +80,7 @@ DATABASE_URL=postgres://neon:npg@localhost:5432/neondb?sslmode=require
 ```
 
 ### Production (.env.production)
+
 ```env
 DATABASE_URL=postgres://user:password@your-project.neon.tech/neondb?sslmode=require
 NODE_ENV=production
@@ -85,15 +89,15 @@ LOG_LEVEL=warn
 
 ## Files Overview
 
-| File | Purpose |
-|------|---------|
-| `Dockerfile` | Multi-stage build for dev and prod |
-| `docker-compose.dev.yml` | Development with Neon Local |
-| `docker-compose.prod.yml` | Production with Neon Cloud |
-| `.env.development` | Development environment config |
-| `.env.production` | Production environment config |
-| `.dockerignore` | Excludes files from Docker build |
-| `Makefile` | Convenient command shortcuts |
+| File                      | Purpose                            |
+| ------------------------- | ---------------------------------- |
+| `Dockerfile`              | Multi-stage build for dev and prod |
+| `docker-compose.dev.yml`  | Development with Neon Local        |
+| `docker-compose.prod.yml` | Production with Neon Cloud         |
+| `.env.development`        | Development environment config     |
+| `.env.production`         | Production environment config      |
+| `.dockerignore`           | Excludes files from Docker build   |
+| `Makefile`                | Convenient command shortcuts       |
 
 ## Documentation
 

@@ -28,17 +28,15 @@ export const signup = async (req, res, next) => {
     cookies.set(res, 'token', token);
 
     logger.info(`User registered successfully: ${email}`);
-    res
-      .status(201)
-      .json({
-        message: 'User registered',
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-        },
-      });
+    res.status(201).json({
+      message: 'User registered',
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+      },
+    });
   } catch (e) {
     logger.error('Signup error', e);
 
@@ -95,7 +93,7 @@ export const signin = async (req, res, next) => {
 export const signout = async (req, res, next) => {
   try {
     cookies.clear(res, 'token');
-    
+
     logger.info('User signed out successfully');
     res.status(200).json({ message: 'User signed out successfully' });
   } catch (e) {

@@ -26,6 +26,7 @@ Use this checklist to ensure you have everything configured correctly.
 ### Configure Environment
 
 - [ ] Copy `.env.example` to `.env.development`
+
   ```bash
   cp .env.example .env.development
   ```
@@ -77,6 +78,7 @@ Use this checklist to ensure you have everything configured correctly.
 ### Configure Production Environment
 
 - [ ] Create `.env.production`:
+
   ```bash
   # Don't copy from example, create fresh
   touch .env.production
@@ -91,21 +93,25 @@ Use this checklist to ensure you have everything configured correctly.
 ### Build and Test Production
 
 - [ ] Build production image:
+
   ```bash
   docker-compose -f docker-compose.prod.yml build
   ```
 
 - [ ] Start production container:
+
   ```bash
   docker-compose -f docker-compose.prod.yml --env-file .env.production up -d
   ```
 
 - [ ] Run production migrations:
+
   ```bash
   docker-compose -f docker-compose.prod.yml exec app npm run db:migrate
   ```
 
 - [ ] Check logs for errors:
+
   ```bash
   docker-compose -f docker-compose.prod.yml logs -f app
   ```
@@ -182,6 +188,7 @@ Use this checklist to ensure you have everything configured correctly.
 ## Common Commands Reference ✓
 
 ### Development
+
 ```bash
 make dev-up          # Start dev environment
 make dev-down        # Stop dev environment
@@ -191,6 +198,7 @@ make dev-shell       # Open shell in container
 ```
 
 ### Production
+
 ```bash
 make prod-build      # Build production image
 make prod-up         # Start production
@@ -200,6 +208,7 @@ make prod-migrate    # Run migrations
 ```
 
 ### Cleanup
+
 ```bash
 make clean           # Remove containers and volumes
 make clean-all       # Remove everything including images

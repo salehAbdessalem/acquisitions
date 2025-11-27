@@ -295,15 +295,15 @@ Can't connect to database?
 
 ## Summary
 
-| Aspect | Development | Production |
-|--------|-------------|------------|
-| **Database** | Neon Local Proxy | Direct to Neon Cloud |
-| **Branch Type** | Ephemeral | Persistent |
-| **Data Lifecycle** | Temporary | Permanent |
-| **Hot Reload** | ✅ Enabled | ❌ Disabled |
-| **Volumes** | Mounted | Copied |
-| **User** | root | nodejs (non-root) |
-| **SSL Cert** | Self-signed | CA-signed |
-| **Container Count** | 2 (app + proxy) | 1 (app only) |
-| **Startup Time** | ~10s | ~5s |
-| **Network** | Docker bridge | Internet |
+| Aspect              | Development      | Production           |
+| ------------------- | ---------------- | -------------------- |
+| **Database**        | Neon Local Proxy | Direct to Neon Cloud |
+| **Branch Type**     | Ephemeral        | Persistent           |
+| **Data Lifecycle**  | Temporary        | Permanent            |
+| **Hot Reload**      | ✅ Enabled       | ❌ Disabled          |
+| **Volumes**         | Mounted          | Copied               |
+| **User**            | root             | nodejs (non-root)    |
+| **SSL Cert**        | Self-signed      | CA-signed            |
+| **Container Count** | 2 (app + proxy)  | 1 (app only)         |
+| **Startup Time**    | ~10s             | ~5s                  |
+| **Network**         | Docker bridge    | Internet             |

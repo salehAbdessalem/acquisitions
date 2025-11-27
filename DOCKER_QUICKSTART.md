@@ -9,10 +9,11 @@
    - Project ID (Project Settings)
 
 2. **Configure Environment**:
+
    ```bash
    # Copy and edit .env.development
    cp .env.example .env.development
-   
+
    # Add your credentials:
    NEON_API_KEY=your_actual_api_key
    NEON_PROJECT_ID=your_actual_project_id
@@ -20,6 +21,7 @@
    ```
 
 3. **Start Development**:
+
    ```bash
    docker-compose -f docker-compose.dev.yml --env-file .env.development up
    ```
@@ -52,6 +54,7 @@ docker-compose -f docker-compose.dev.yml down
    - Format: `postgres://user:password@ep-xxx.neon.tech/neondb?sslmode=require`
 
 2. **Configure Environment**:
+
    ```bash
    # Create .env.production
    DATABASE_URL=postgres://user:password@your-project.neon.tech/neondb?sslmode=require
@@ -61,10 +64,11 @@ docker-compose -f docker-compose.dev.yml down
    ```
 
 3. **Deploy**:
+
    ```bash
    # Build and start
    docker-compose -f docker-compose.prod.yml --env-file .env.production up -d
-   
+
    # Run migrations
    docker-compose -f docker-compose.prod.yml exec app npm run db:migrate
    ```
@@ -87,14 +91,14 @@ docker-compose -f docker-compose.prod.yml down
 
 ## 📝 Key Differences
 
-| Feature | Development | Production |
-|---------|-------------|------------|
-| Database | Neon Local (ephemeral branches) | Neon Cloud |
-| Connection | `neon-local:5432` | `*.neon.tech` |
-| Branch Lifecycle | Auto-created/deleted | Persistent |
-| SSL Certificate | Self-signed | Valid CA |
-| Hot Reload | ✅ Enabled | ❌ Disabled |
-| Build Target | `development` | `production` |
+| Feature          | Development                     | Production    |
+| ---------------- | ------------------------------- | ------------- |
+| Database         | Neon Local (ephemeral branches) | Neon Cloud    |
+| Connection       | `neon-local:5432`               | `*.neon.tech` |
+| Branch Lifecycle | Auto-created/deleted            | Persistent    |
+| SSL Certificate  | Self-signed                     | Valid CA      |
+| Hot Reload       | ✅ Enabled                      | ❌ Disabled   |
+| Build Target     | `development`                   | `production`  |
 
 ## ⚠️ Important Notes
 
@@ -106,6 +110,7 @@ docker-compose -f docker-compose.prod.yml down
 ## 🆘 Troubleshooting
 
 **Can't connect to database?**
+
 ```bash
 # Check Neon Local is healthy
 docker-compose -f docker-compose.dev.yml ps
@@ -115,6 +120,7 @@ docker-compose -f docker-compose.dev.yml logs neon-local
 ```
 
 **Port already in use?**
+
 ```powershell
 # Windows: Find process using port 3000
 netstat -ano | findstr :3000

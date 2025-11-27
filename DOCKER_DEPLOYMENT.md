@@ -172,6 +172,7 @@ docker-compose -f docker-compose.prod.yml down
 Instead of using `.env.production`, inject environment variables directly:
 
 **Docker Compose Override:**
+
 ```bash
 docker-compose -f docker-compose.prod.yml up -d \
   -e DATABASE_URL="postgres://..." \
@@ -179,6 +180,7 @@ docker-compose -f docker-compose.prod.yml up -d \
 ```
 
 **Docker Run:**
+
 ```bash
 docker build --target production -t acquisitions:latest .
 
@@ -219,20 +221,20 @@ docker-compose -f docker-compose.prod.yml run --rm app npm run db:migrate
 
 ### Development (Neon Local)
 
-| Variable | Description | Example |
-|----------|-------------|---------|
-| `NEON_API_KEY` | Neon API key from console | `neon_api_xxx...` |
-| `NEON_PROJECT_ID` | Your Neon project ID | `proud-rain-12345` |
-| `PARENT_BRANCH_ID` | Parent branch for ephemeral branches | `main` |
-| `DATABASE_URL` | Connection to Neon Local | `postgres://neon:npg@localhost:5432/neondb?sslmode=require` |
+| Variable           | Description                          | Example                                                     |
+| ------------------ | ------------------------------------ | ----------------------------------------------------------- |
+| `NEON_API_KEY`     | Neon API key from console            | `neon_api_xxx...`                                           |
+| `NEON_PROJECT_ID`  | Your Neon project ID                 | `proud-rain-12345`                                          |
+| `PARENT_BRANCH_ID` | Parent branch for ephemeral branches | `main`                                                      |
+| `DATABASE_URL`     | Connection to Neon Local             | `postgres://neon:npg@localhost:5432/neondb?sslmode=require` |
 
 ### Production (Neon Cloud)
 
-| Variable | Description | Example |
-|----------|-------------|---------|
+| Variable       | Description                  | Example                                                        |
+| -------------- | ---------------------------- | -------------------------------------------------------------- |
 | `DATABASE_URL` | Neon Cloud connection string | `postgres://user:pass@ep-xxx.neon.tech/neondb?sslmode=require` |
-| `NODE_ENV` | Node environment | `production` |
-| `LOG_LEVEL` | Logging level | `warn` or `error` |
+| `NODE_ENV`     | Node environment             | `production`                                                   |
+| `LOG_LEVEL`    | Logging level                | `warn` or `error`                                              |
 
 ## Troubleshooting
 
@@ -241,6 +243,7 @@ docker-compose -f docker-compose.prod.yml run --rm app npm run db:migrate
 **Symptoms**: `neon-local` container exits immediately
 
 **Solutions**:
+
 1. Verify your `NEON_API_KEY` and `NEON_PROJECT_ID` are correct
 2. Check that `PARENT_BRANCH_ID` exists in your Neon project
 3. View logs: `docker-compose -f docker-compose.dev.yml logs neon-local`
@@ -250,6 +253,7 @@ docker-compose -f docker-compose.prod.yml run --rm app npm run db:migrate
 **Symptoms**: Connection refused or timeout errors
 
 **Solutions**:
+
 1. Ensure `neon-local` container is healthy: `docker-compose -f docker-compose.dev.yml ps`
 2. Check the `DATABASE_URL` uses the correct service name (`neon-local` in Docker network)
 3. Verify SSL mode is set correctly: `?sslmode=require`
@@ -257,6 +261,7 @@ docker-compose -f docker-compose.prod.yml run --rm app npm run db:migrate
 ### Issue: Hot reload not working in development
 
 **Solutions**:
+
 1. Verify volumes are mounted correctly in `docker-compose.dev.yml`
 2. Check that your `--watch` flag is working: `npm run dev` should use Node's watch mode
 3. On Windows, ensure Docker Desktop has proper file sharing permissions
@@ -269,13 +274,14 @@ If using `pg` or `postgres` libraries, add to your database client config:
 import { neon } from '@neondatabase/serverless';
 
 const sql = neon(process.env.DATABASE_URL, {
-  ssl: { rejectUnauthorized: false }
+  ssl: { rejectUnauthorized: false },
 });
 ```
 
 ### Issue: Production container won't start
 
 **Solutions**:
+
 1. Check logs: `docker-compose -f docker-compose.prod.yml logs app`
 2. Verify `DATABASE_URL` is set and correct
 3. Test connection to Neon Cloud: `pg_isready -d "your_connection_string"`
@@ -286,6 +292,7 @@ const sql = neon(process.env.DATABASE_URL, {
 **Symptoms**: Error binding to port 3000 or 5432
 
 **Solutions**:
+
 ```bash
 # Find process using the port (Windows PowerShell)
 netstat -ano | findstr :3000
@@ -329,6 +336,7 @@ docker-compose -f docker-compose.prod.yml down
 ## Support
 
 For issues specific to:
+
 - **Neon Database**: https://neon.tech/docs/introduction
 - **Docker**: https://docs.docker.com/
 - **This Application**: [Open an issue in the repository]
